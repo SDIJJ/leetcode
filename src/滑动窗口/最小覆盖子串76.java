@@ -41,4 +41,8 @@ public class 最小覆盖子串76 {
         }
         return res;
     }
+
+    public static void main(String[] args) {
+
+    }
 }
