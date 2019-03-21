@@ -3,7 +3,7 @@ package 快排思想;
 import java.util.Arrays;
 
 /**
- * @Description: 颜色分类75
+ * @Description: 颜色分类75(s三路快排思想)
  * @author: Arnold
  * @since: 2019/3/21 12:54
  * @version: v1.0.0
