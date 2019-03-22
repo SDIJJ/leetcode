@@ -1,4 +1,4 @@
-package 滑动窗口;
+package 数组.滑动窗口;
 
 /**
  * @Description: 3

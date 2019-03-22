@@ -1,10 +1,5 @@
-package 滑动窗口;
+package 数组.滑动窗口;
 
-import com.sun.javafx.scene.control.skin.VirtualFlow;
-
-import javax.xml.stream.events.Characters;
-import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.*;
 
 /**

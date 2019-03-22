@@ -1,4 +1,4 @@
-package 快排思想;
+package 数组.快排思想;
 
 /**
  * @Description: 数组中的第K个最大元素

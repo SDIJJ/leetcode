@@ -1,4 +1,4 @@
-package 快排思想;
+package 数组.快排思想;
 
 import java.util.Arrays;
 

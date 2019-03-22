@@ -1,4 +1,4 @@
-package 对撞指针;
+package 数组.指针对撞;
 
 /**
  * @Description: 反转字符串
