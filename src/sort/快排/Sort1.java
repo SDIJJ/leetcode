@@ -1,6 +1,7 @@
 package sort.快排;
 
-import com.jia.test.sort.Util;
+
+import sort.Util;
 
 /**
  * @Description: 双路快拍，基于交换索引实现
