@@ -1,6 +1,7 @@
 package 链表.进阶;
 
 import 链表.ListNode;
+import 链表.虚拟头结点.合并两个有序的链表21;
 
 /**
  * @Description: 给出一个链表，每 k 个节点一组进行翻转，并返回翻转后的链表。
@@ -10,36 +11,40 @@ import 链表.ListNode;
  */
 public class k个一组翻转链表25 {
     public ListNode reverseKGroup(ListNode head, int k) {
-        ListNode prev = null;
+        ListNode pre = null;
         ListNode cur = head;
         ListNode next = null;
         ListNode check = head;
-
-        int canProceed = 0;
+        int j = 0;
         int count = 0;
-        // 检查链表长度是否满足翻转
-        while (canProceed < k && check != null) {
+
+        //计数
+        while (j < k && check != null) {
             check = check.next;
-            canProceed++;
+            j++;
         }
-        // 满足条件，进行翻转
-        if (canProceed == k) {
+
+        //递归终止条件:链表的长度小于k,直接放回
+        if (j != k)
+            return head;
+        else {
+            //翻转k部分链表
             while (count < k && cur != null) {
                 next = cur.next;
-                cur.next = prev;
-                prev = cur;
+                cur.next = pre;
+                pre = cur;
                 cur = next;
                 count++;
             }
-            if (next != null) {
-                // head 为链表翻转后的尾节点
-                head.next = reverseKGroup(next, k);
-            }
-            // prev 为链表翻转后的头结点
-            return prev;
-        } else {
-            // 不满住翻转条件，直接返回 head 即可
-            return head;
+
+            //对后边的部分进行操作
+            if (next != null)
+                head.next = reverseKGroup(cur.next, k);
+            return pre;
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new k个一组翻转链表25().reverseKGroup(new ListNode(new int[]{1, 2, 3, 4, 5}), 2));
     }
 }
