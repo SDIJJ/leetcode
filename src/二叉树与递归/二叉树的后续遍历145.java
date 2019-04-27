@@ -38,8 +38,6 @@ public class 二叉树的后续遍历145 {
 
                 if (command.node.left != null)
                     stack.add(new Command("go", command.node.left));
-
-
             }
         }
         return list;
