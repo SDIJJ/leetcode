@@ -1,6 +1,5 @@
 package sort.快排;
 
-
 import sort.Util;
 
 /**

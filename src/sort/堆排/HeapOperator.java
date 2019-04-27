@@ -77,16 +77,21 @@ public class HeapOperator {
 
     /**
      * 堆排序
+     *
      * @param arr
      */
     public static void heapSort(int arr[]) {
+        //1.把无序数组构建成二叉堆
         for (int i = (arr.length - 2) / 2; i >= 0; i--) {
-            shiftDown(arr, i, arr.length - 1);
-
+            shiftDown(arr, i, arr.length-1);
         }
+        System.out.println(Arrays.toString(arr));
+        //2.循环删除堆顶的元素，移动到集合尾部，调节堆产生新的堆顶
         for (int i = arr.length - 1; i > 0; i--) {
-            Util.swap(arr, 0, i);
-            shiftDown(arr, 0, i - 1);
+            //最后一个元素和第一个元素交换
+           Util.swap(arr,0,i);
+            //下沉最大堆
+            shiftDown(arr, 0, i-1);
 
         }
     }

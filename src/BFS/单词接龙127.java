@@ -13,7 +13,7 @@ import java.util.*;
 public class 单词接龙127 {
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         Queue<Pair<String, Integer>> queue = new LinkedList<>();
-        queue.add(new Pair<>(beginWord, 0));
+        queue.add(new Pair<>(beginWord, 1));
         while (!queue.isEmpty()) {
             Pair<String, Integer> pair = queue.poll();
             String string = pair.getKey();
@@ -27,6 +27,7 @@ public class 单词接龙127 {
                         if (endWord.equals(s))
                             return step + 1;
                         queue.add(new Pair<>(s, step + 1));
+                        wordList.set(i, "======");
                     }
                 }
             }
@@ -39,8 +40,6 @@ public class 单词接龙127 {
             return false;
         char[] chars = str1.toCharArray();
         char[] chars1 = str2.toCharArray();
-        Arrays.sort(chars);
-        Arrays.sort(chars1);
         int count = 0;
         for (int i = 0; i < chars.length; i++) {
             if (chars[i] != chars1[i])
