@@ -31,4 +31,12 @@ class TreeNode {
         val = x;
         left = left;
     }
+
+    public static void main(String[] args) {
+        String s="xxxxxxxxxxxxxxx#123#456zzzzz";
+        int n = s.indexOf("#");
+        int k=s.indexOf("#",n+1);
+        String s2=s.substring(n+2,k);
+        System.out.println(s2);
+    }
 }
